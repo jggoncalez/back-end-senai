@@ -2,19 +2,23 @@
 $nota1 = 5;
 $nota2 = 0;
 $media = ($nota1 + $nota2)/2;
+$presenca = 75; // Em porcentagem
 
-
-if ($media > 10) {
-    echo "Erro, média acima do permitido \n";
-} elseif ($media > 8) {
-    echo "Média excelente ", $media;
-} elseif ($media > 6) {
-    echo "Boa! ", $media;
-} elseif ($media > 4) {
-    echo "Hmmm... quase ", $media; 
-} elseif ($media > 2) {
-    echo "Vixe, aí não deu certo! ", $media;
+if ($presenca >= 75) {
+    if ($media > 10) {
+        echo "Erro, média acima do permitido!!! Média:  \n", $media;
+    } elseif ($media > 8) {
+        echo "Média excelente! Média: ", $media;
+    } elseif ($media > 6) {
+        echo "Boa! Média: ", $media;
+    } elseif ($media > 4) {
+        echo "Hmmm... quase. Média: ", $media; 
+    } elseif ($media > 2) {
+        echo "Vixe, aí não deu certo! Média: ", $media;
+    } else {
+        echo "Você está no bico do corvo! Média: ", $media;
+    }
 } else {
-    echo "Você está no bico do corvo ", $media;
+    echo "Presença baixa! Reprovado!!!";
 }
 ?>
