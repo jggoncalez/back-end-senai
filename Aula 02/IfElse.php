@@ -1,11 +1,15 @@
 <?php
-$nome_aluno = "Enzo Enrico";
-$nota1 = 5;
-$nota2 = 0;
-$media = ($nota1 + $nota2)/2;
-$presenca = 75; // Em porcentagem
 
-if ($nome_aluno = "Enzo Enrico"){
+echo "Boa Tarde \n";
+
+$nome_aluno = readline("Digite o nome do Aluno: \n");
+$nota1 = readline("Digite a 1ª nota: \n");
+$nota2 = readline("Digite a 2ª nota do aluno: \n");
+$presenca = readline("Digite a presença (em %): \n");
+$media = ($nota1 + $nota2)/2;
+
+
+if ($nome_aluno == "Enzo Enrico"){
     echo "Aprovado!";
 } else{
     if ($presenca >= 75) {
