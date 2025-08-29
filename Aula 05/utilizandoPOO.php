@@ -18,6 +18,10 @@ class Carro {
     public function mostrar() {
         echo "Marca: {$this->marca}\nModelo: {$this->modelo}\nAno: {$this->ano}\nRevisão: " . ($this->revisao ? "Sim" : "Não") . "\nNúmero de Donos: {$this->N_Donos}\n\n";
     }
+
+    public function ligar() {
+        echo "O carro {$this->marca} está ligado!\n";
+    }
 }
 
 $carro1 = new Carro("Porsche", "911", "2020", false, 3);
@@ -33,3 +37,5 @@ $carro3->mostrar();
 $carro4->mostrar();
 $carro5->mostrar();
 $carro6->mostrar();
+
+$carro2 ->ligar();

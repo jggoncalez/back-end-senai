@@ -44,6 +44,16 @@ o--     \\    / @)
         echo "Sexo: {$this->sexo} \n\n";
 
     }
+
+    public function marcarTerritório(){
+        echo "               ;~~,__
+:-....,-------'`-'._.'
+`-,,,  ,       ,'~~'
+    ; ,'~.__; /--.
+    :| :|   :|``(;
+    `-'`-'  `-'
+O cachorro {$this->nome} está marcando território!";
+    }
 }
 
 $cachorro1 = new Cachorro("Doge", 7, "Shiba Inu", true, "masculino");
@@ -57,32 +67,11 @@ $cachorro8 = new Cachorro("Molly", 1, "Dachshund", false, "feminino");
 $cachorro9 = new Cachorro("Buddy", 3, "Boxer", true, "masculino");
 $cachorro10 = new Cachorro("Daisy", 4, "Cocker Spaniel", false, "feminino");
 
-$cachorro1->mostrar();
-$cachorro1->latir();
+$cachorros = [$cachorro1, $cachorro2, $cachorro3, $cachorro4, $cachorro5, $cachorro6, $cachorro7, $cachorro8, $cachorro9, $cachorro10];
 
-$cachorro2->mostrar();
-$cachorro2->latir();
-
-$cachorro3->mostrar();
-$cachorro3->latir();
-
-$cachorro4->mostrar();
-$cachorro4->latir();
-
-$cachorro5->mostrar();
-$cachorro5->latir();
-
-$cachorro6->mostrar();
-$cachorro6->latir();
-
-$cachorro7->mostrar();
-$cachorro7->latir();
-
-$cachorro8->mostrar();
-$cachorro8->latir();
-
-$cachorro9->mostrar();
-$cachorro9->latir();
-
-$cachorro10->mostrar();
-$cachorro10->latir();
+foreach ($cachorros as $cachorro) {
+    $cachorro->mostrar();
+    $cachorro->latir();
+    $cachorro->marcarTerritório();
+    echo "\n-----------------------------\n\n";
+}
