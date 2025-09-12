@@ -33,13 +33,13 @@ interface Forma {
     public function calcularArea($val1);
 }
 
-class Quadrado implements Forma{
+class Square implements Forma{
     public function calcularArea($val1){
         echo $val1**2;
     }
 }
 
-class Circulo implements Forma{
+class Circle implements Forma{
     public function calcularArea($val1){
         echo $val1**2 * pi();
     }
@@ -50,11 +50,16 @@ class Pentagon implements Forma{
         echo (5 * $val1**2) / (4 * tan(pi() / 5));
     }
 }
+class Hexagon implements Forma{
+    public function calcularArea($val1){
+        echo ((3 * sqrt(3) * $val1**2)/2);
+    }
+}
 
-$square = new Quadrado();
-$circle = new Circulo();
+$square = new Square();
+$circle = new Circle();
 $pentagon = new Pentagon();
-$circle = new Circulo();
+$hexagon = new Hexagon();
 
 $ladoQuadrado = readline("Digite a medida do lado do quadrado: ");
 $raioCirculo = readline("Digite o raio do círculo: ");
@@ -62,5 +67,6 @@ $circle->calcularArea($raioCirculo);
 
 $ladoPentagono = readline("Digite a medida do lado do pentágono: ");
 $pentagon->calcularArea($ladoPentagono);
-$raioCirculo = readline("Digite o raio do círculo: ");
-$circle->calcularArea($raioCirculo);
+
+$ladoHexagono = readline("Digite a medida do lado do hexágono: ");
+$hexagon->calcularArea($ladoHexagono);
