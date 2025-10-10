@@ -1,5 +1,10 @@
 <?php
 
+/*
+Relacionamento: Herança (Extends)
+*/
+
+
 namespace Cenario_3;
 
 class Pessoas

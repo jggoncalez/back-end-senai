@@ -1,5 +1,9 @@
 <?php
 
+/*
+Relacionamento: Herança (Extends)
+*/
+
 class Cinema{
     private string $filmeNome;
     private string $filmeAno;

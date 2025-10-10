@@ -1,5 +1,9 @@
 <?php
 
+/*
+Relacionamento: Herança (Extends)
+*/
+
 Class Biblioteca{
     private string $nomeLivro;
     private string $autorLivro;

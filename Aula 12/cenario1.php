@@ -1,5 +1,9 @@
 <?php
 
+/*
+Relacionamento: Realização (Interface)
+*/
+
 namespace Cenario_1;
 
 interface Localidades {

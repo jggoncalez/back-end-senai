@@ -1,5 +1,9 @@
 <?php
 
+/*
+Relacionamento: herança (Extends)
+*/
+
 namespace Cenario_2;
 
 class Herois{
