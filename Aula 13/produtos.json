@@ -1,0 +1,32 @@
+{
+    "3": {
+        "id": 3,
+        "nome": "Queijo Brie",
+        "curso": 34.99
+    },
+    "4": {
+        "id": 4,
+        "nome": "Iogurte Grego",
+        "curso": 8.99
+    },
+    "5": {
+        "id": 5,
+        "nome": "Guaran\u00e1 Jesus",
+        "curso": 8.49
+    },
+    "6": {
+        "id": 6,
+        "nome": "Bolacha Bono",
+        "curso": 4.99
+    },
+    "7": {
+        "id": 7,
+        "nome": "Desinfetante Barbarex",
+        "curso": 3.99
+    },
+    "8": {
+        "id": 8,
+        "nome": "Prestobarba Bic",
+        "curso": 12.99
+    }
+}

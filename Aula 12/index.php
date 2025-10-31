@@ -1,5 +1,7 @@
 <?php
 
+namespace Aula12;
+
 require_once "CRUD.php";
 require_once "AlunoDAO.php";
 

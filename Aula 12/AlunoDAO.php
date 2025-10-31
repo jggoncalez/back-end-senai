@@ -1,4 +1,5 @@
 <?php
+namespace Aula12;
 
 class AlunoDAO {
     private $alunos = []; // Array para armazenamento temporário dos objetos e seus atributos, antes de mandar para o banco de dados. foi criado inicialmente vazio [];

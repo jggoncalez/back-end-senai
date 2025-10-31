@@ -1,4 +1,5 @@
 <?php
+namespace Aula12;
 
 class Aluno {
     private $id;
