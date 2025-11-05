@@ -4,13 +4,13 @@ namespace aula14;
 
 class Bebidas{
 
-    private int $cod;
-    private string $nome;
-    private string $categoria;
-    private int $volume;
-    private float $valor;
-    private int $qtt;
-    public function __construct(int $qtt, float $valor, int $volume, string $categoria, string $nome, int $cod)
+    private $cod;
+    private $nome;
+    private $categoria;
+    private $volume;
+    private $valor;
+    private $qtt;
+    public function __construct($qtt, $valor, $volume, $categoria, $nome, $cod)
     {
         $this->qtt = $qtt;
         $this->valor = $valor;

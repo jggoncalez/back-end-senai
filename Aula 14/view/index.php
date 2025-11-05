@@ -26,11 +26,11 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 <main>
     <h1>Formulário de cadastro de bebidas</h1>
     <form action="" method="POST">
-        <input type="hidden" name="acao" value="criar">
+        <input type="hidden" name="acao" value="criar"><br>
         <label for="">Código:</label>
-        <input type="number" name="cod" required>
+        <input type="number" name="cod" required><br>
         <label for="">Nome:</label>
-        <input type="text" name="nome" required>
+        <input type="text" name="nome" required><br>
         <label for="cat">Categoria:</label>
         <select name="categoria" id="cat" required>
             <option value="">Selecione uma categoria</option>
@@ -40,16 +40,16 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
             <option value="refrigerante">Refrigerante</option>
             <option value="suco">Suco</option>
             <option value="agua">Água</option>
-        </select>
+        </select><br>
 
         <label for="">Volume:</label>
-        <input type="number" name="volume" step="0.01" required>
+        <input type="number" name="volume" step="0.01" required><br>
 
         <label for="">Valor:</label>
-        <input type="number" name="valor" step="0.01" required>
+        <input type="number" name="valor" step="0.01" required><br>
 
         <label for="">Quantidade:</label>
-        <input type="number" name="qtt" required>
+        <input type="number" name="qtt" required><br>
         <button type="submit">Cadastrar</button>
     </form>
 </main>
