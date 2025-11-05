@@ -5,8 +5,6 @@ namespace aula14;
 class Bebidas{
 
     private int $cod;
-
-
     private string $nome;
     private string $categoria;
     private int $volume;

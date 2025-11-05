@@ -27,6 +27,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     <h1>Formulário de cadastro de bebidas</h1>
     <form action="" method="POST">
         <input type="hidden" name="acao" value="criar">
+        <label for="">Código:</label>
+        <input type="number" name="cod" required>
         <label for="">Nome:</label>
         <input type="text" name="nome" required>
         <label for="cat">Categoria:</label>
@@ -47,7 +49,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         <input type="number" name="valor" step="0.01" required>
 
         <label for="">Quantidade:</label>
-        <input type="number" name="qtde" required>
+        <input type="number" name="qtt" required>
         <button type="submit">Cadastrar</button>
     </form>
 </main>
