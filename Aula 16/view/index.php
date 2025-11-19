@@ -31,13 +31,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 ?>
 
 <!DOCTYPE html>
-<html lang="UTf-8">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <title>Barzin do Zézin</title>
-
+    <title>Bar</title>
 </head>
 <body>
 
@@ -45,8 +44,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <h1>Formulário cadastro de bebidas</h1>
         <form action="" method="POST">
             <input type="hidden" name="acao" value="criar">
-            <label for="">Nome:</label>
-            <input type="text" name="nome" required>
+            <label for="nome">Nome:</label>
+            <input type="text" name="nome" id="nome" required>
+            
             <label for="cat">Categoria:</label>
             <select name="categoria" id="cat" required>
                 <option value="">Selecione uma categoria</option>
@@ -58,14 +58,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <option value="agua">Água</option>
             </select>
 
-            <label for="">Volume:</label>
-            <input type="number" name="volume" step="0.01" required>
+            <label for="volume">Volume:</label>
+            <input type="number" name="volume" id="volume" step="0.01" required>
 
-            <label for="">Valor:</label>
-            <input type="number" name="valor" step="0.01" required>
+            <label for="valor">Valor:</label>
+            <input type="number" name="valor" id="valor" step="0.01" required>
 
-            <label for="">Quantidade:</label>
-            <input type="number" name="qtde" required>
+            <label for="qtde">Quantidade:</label>
+            <input type="number" name="qtde" id="qtde" required>
+            
             <button type="submit">Cadastrar</button>
         </form>
 
@@ -78,34 +79,39 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         <th>Volume</th>
                         <th>Valor</th>
                         <th>Quantidade</th>
+                        <th>Ações</th>
                     </tr>
                 </thead>
                 <tbody>
                     <?php
                     $bebidas = $controller->ler();
                     foreach ($bebidas as $bebida) {
+                        $nome = htmlspecialchars($bebida->getNome());
+                        $categoria = htmlspecialchars($bebida->getCategoria());
+                        $volume = $bebida->getVolume();
+                        $valor = $bebida->getValor();
+                        $qtde = $bebida->getQtde();
+                        
                         echo "<tr>";
-                        echo "<td>{$bebida->getNome()}</td>";
-                        echo "<td>{$bebida->getCategoria()}</td>";
-                        echo "<td>{$bebida->getVolume()}</td>";
-                        echo "<td>{$bebida->getValor()}</td>";
-                        echo "<td>{$bebida->getQtde()}</td>";
+                        echo "<td>{$nome}</td>";
+                        echo "<td>{$categoria}</td>";
+                        echo "<td>{$volume}</td>";
+                        echo "<td>{$valor}</td>";
+                        echo "<td>{$qtde}</td>";
                         echo "<td>
-                                <button onclick=\"abrirModal('{$bebida->getNome()}', '{$bebida->getCategoria()}', {$bebida->getVolume()}, {$bebida->getValor()}, {$bebida->getQtde()})\" class=\"btn-editar\">Editar</button>
+                                <button onclick=\"abrirModal('{$nome}', '{$categoria}', {$volume}, {$valor}, {$qtde})\" class=\"btn-editar\">Editar</button>
                                 <form action=\"\" method=\"POST\" style=\"display:inline;\">
                                     <input type=\"hidden\" name=\"acao\" value=\"deletar\">
-                                    <input type=\"hidden\" name=\"nome\" value=\"{$bebida->getNome()}\">
-                                    <button type=\"submit\" class=\"btn-deletar\">Deletar</button>
-                                </form></td>";
+                                    <input type=\"hidden\" name=\"nome\" value=\"{$nome}\">
+                                    <button type=\"submit\" class=\"btn-deletar\" onclick=\"return confirm('Tem certeza que deseja deletar {$nome}?')\">Deletar</button>
+                                </form>
+                              </td>";
                         echo "</tr>";
                     }
                     ?>
-                    <form action="" method="POST">
-                     <input type="hidden" name="acao" value="deletar">
-                    </form>
-                <tbody>
                 </tbody>
             </table>
+        </div>
     </main>
 
     <!-- Modal de Edição -->

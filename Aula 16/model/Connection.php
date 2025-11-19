@@ -16,7 +16,7 @@ class Connection
                 $host = 'localhost';
                 $dbname = 'projeto_bebidas';
                 $user = 'root';
-                $pass = '1234';
+                $pass = 'senaisp';
 
                 self::$instance = new PDO("mysql:host=$host; charset=utf8", $user, $pass);
 
